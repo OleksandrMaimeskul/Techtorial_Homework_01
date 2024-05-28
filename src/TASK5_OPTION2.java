@@ -10,7 +10,6 @@ public class TASK5_OPTION2 {
         System.out.println("Please enter your first exam score: ");
         int firstExamScore = scanner.nextInt();
         double firstExam20 = firstExamScore * 0.2;
-
         System.out.println("Please enter your second exam score: ");
         int secondExamScore = scanner.nextInt();
         double secondExam30 = secondExamScore * 0.3;
