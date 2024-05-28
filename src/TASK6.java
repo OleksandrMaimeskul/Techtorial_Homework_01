@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class TASK6 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int requiredSteps = 10_000, requiredCaloriesPerDay = 1_500;
+        int requiredSteps = 10_000, maxCaloriesPerDay = 1500;
         double requiredMiles = 4.0;
 
         System.out.println("Let's help to David lose 10kg per one month.");
@@ -17,8 +17,8 @@ public class TASK6 {
         System.out.println("Please enter amount of calories you spent per last day: ");
         int caloriesCount = scanner.nextInt();
 
-        boolean isLoseOrNot = stepsCount >= requiredSteps && milesCount >= requiredMiles
-                && caloriesCount >= requiredCaloriesPerDay;
+        boolean isLoseOrNot = (stepsCount >= requiredSteps || milesCount >= requiredMiles)
+                && caloriesCount <= maxCaloriesPerDay;
         System.out.println("Daily Steps is " + stepsCount);
         System.out.println("Daily Run is " + milesCount);
         System.out.println("Daily calories is " + caloriesCount);
